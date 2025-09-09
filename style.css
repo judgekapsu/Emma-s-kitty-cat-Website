@@ -37,7 +37,7 @@ body img {
 }
 #results {
   margin-left: 10em;   /* pushes it away from the left edge */
-  padding-left: 10em;  /* optional: extra spacing inside */
+  padding-left: 1em;  /* optional: extra spacing inside */
 }
 
 header h1 {
