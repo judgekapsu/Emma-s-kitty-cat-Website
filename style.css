@@ -36,7 +36,7 @@ body img {
   margin: 0 0 1em 1em; /* top=0, right=0, bottom=1em, left=1em */
 }
 #results {
-  margin-left: 2em;   /* pushes it away from the left edge */
+  margin-left: 10em;   /* pushes it away from the left edge */
   padding-left: 1em;  /* optional: extra spacing inside */
 }
 
