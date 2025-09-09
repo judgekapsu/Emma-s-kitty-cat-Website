@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    
+    <h1>What Are We Going to Name This Sweet Baby?</h1>
+    
+  </header>
+
+  <main>
+    <h2>Here is a running list of the number of votes each name has gotten!</h2>
+    <img src="Kitty.png" alt="orangecat" width="200px">
+    </main>
+    <section class="vote">
+       <div id="results">
+         <script>fetch("https://sheetdb.io/api/v1/9px0q7g3ikpoe")
+          .then(res => res.json())
+          .then(data => {
+            const counts = {};
+
+            data.forEach(row => {
+              // split comma-separated names
+              const names = row['Name Options:'].split(',').map(n => n.trim());
+              names.forEach(name => {
+                counts[name] = (counts[name] || 0) + 1;
+              });
+            });
+
+            // sort by vote count
+            const sorted = Object.entries(counts).sort((a,b) => b[1]-a[1]);
+
+            const resultsDiv = document.getElementById("results");
+            sorted.forEach(([name, count]) => {
+              const p = document.createElement("p");
+              p.textContent = `${name}: ${count} votes`;
+              resultsDiv.appendChild(p);
+            });
+          });</script>
+
+       </div>
+       <br><br><br><br><br><br>
+
+      </section>
+
+    
+  </main>
+
+  <footer>
+    Thank you!!! &hearts;
+  </footer>
+</body>
+</html>
