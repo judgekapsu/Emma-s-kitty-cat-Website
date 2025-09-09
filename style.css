@@ -32,7 +32,7 @@ body img {
   margin-right: 1em;
 }
 .right-photo {
-  float: right;
+  float: right !important;
   margin: 0 0 1em 1em; /* top=0, right=0, bottom=1em, left=1em */
 }
 
